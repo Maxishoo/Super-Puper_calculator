@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1638719016 source:c:\users\rcmak\onedrive\informatica\super puper calculator\main.cpp
+	"Calculator_header.h"
+
+1638716083 source:c:\users\rcmak\onedrive\informatica\super puper calculator\print(str_time_color).cpp
+	"Calculator_header.h"
+
+1638437932 c:\users\rcmak\onedrive\informatica\super puper calculator\calculator_header.h
+	<iostream>
+	"windows.h"
+	<string>
+
+1638718923 source:c:\users\rcmak\onedrive\informatica\super puper calculator\printmenu.cpp
+	"Calculator_header.h"
+
+1638374264 source:c:\users\rcmak\onedrive\informatica\super puper calculator\vspomogat_len_slice.cpp
+	"Calculator_header.h"
+
+1637840440 source:c:\users\rcmak\onedrive\informatica\super puper calculator\vspomogat_inttosimb_ch1_ch2.cpp
+	"Calculator_header.h"
+
+1637785849 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculate_sum.cpp
+	"Calculator_header.h"
+
+1638444999 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculate_raznost.cpp
+	"Calculator_header.h"
+
+1638202599 source:c:\users\rcmak\onedrive\informatica\super puper calculator\reverse_str.cpp
+	"Calculator_header.h"
+
+1638210412 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calcumnoshen.cpp
+	"Calculator_header.h"
+
+1638380564 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calcdel.cpp
+	"Calculator_header.h"
+
+1638370664 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculator_new menu.cpp
+	"Calculator_header.h"
+
+1638720451 source:c:\users\rcmak\onedrive\informatica\super puper calculator\raspredelenie.cpp
+	"Calculator_header.h"
+
