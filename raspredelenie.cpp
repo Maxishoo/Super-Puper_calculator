@@ -1,140 +1,158 @@
 #include "Calculator_header.h"
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-void raspredplus(string ch1,string ch2,string znak)
+void raspredplus(string ch1,string ch2,string znak,string &last)
 {
     print("Answer>> "+ch1+znak+ch2+"==",10,"G");
     SetConsoleTextAttribute(hConsole, 9);
     if(ch1[0]=='-' && ch2[0]=='-')
     {
-        cout<<"-"+calsum(itc_slice_str(ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1)), maxlen(itc_slice_str(ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1))));
+        last="-"+calsum(itc_slice_str(ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1)), maxlen(itc_slice_str(ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1))));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]=='-' && ch2[0]!='-')
     {
         //cout<<"-"+calsum(ch1,ch2, maxlen(ch1,ch2));
-        cout<<calcrazn(ch2,itc_slice_str(ch1,1,itc_len(ch1)), false);
+        last=calcrazn(ch2,itc_slice_str(ch1,1,itc_len(ch1)), false);
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]!='-' && ch2[0]=='-')
     {
-        //cout<<"-"+calsum(ch1,ch2, maxlen(ch1,ch2));
-        cout<<calcrazn(ch1,itc_slice_str(ch2,1,itc_len(ch1)), false);
+        cout<<"-"+calsum(ch1,ch2, maxlen(ch1,ch2));
+        last=calcrazn(ch1,itc_slice_str(ch2,1,itc_len(ch1)), false);
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else{
-    cout<<calsum(ch1,ch2, maxlen(ch1,ch2));
+    last=calsum(ch1,ch2, maxlen(ch1,ch2));
+    cout<<last;
     cout<<endl;
-    writecom();
+    //writecom();
     }
 }
-void raspredrazn(string ch1,string ch2,string znak)
+void raspredrazn(string ch1,string ch2,string znak,string &last)
 {
     print("Answer>> "+ch1+znak+ch2+"==",10,"G");
     SetConsoleTextAttribute(hConsole, 9);
     if(ch1[0]=='-' && ch2[0]=='-')
     {
-        cout<<"-"+calcrazn(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1)), maxlen(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1))));
+        if(calcrazn(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1)), maxlen(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1))))=="0"){last="0";cout<<"0";}else{
+        cout<<"-"+calcrazn(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1)), maxlen(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1))));last="-"+calcrazn(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1)), maxlen(itc_slice_str(ch2,1,itc_len(ch1)),itc_slice_str(ch1,1,itc_len(ch1))));}
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]!='-' && ch2[0]=='-')
     {
-        cout<<calsum(ch1,itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,itc_slice_str(ch2,1,itc_len(ch1))));
+        last=calsum(ch1,itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,itc_slice_str(ch2,1,itc_len(ch1))));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]=='-' && ch2[0]!='-')
     {
         //cout<<"-"+calsum(ch1,ch2, maxlen(ch1,ch2));
-        cout<<calsum(ch2,itc_slice_str(ch1,1,itc_len(ch1)), maxlen(ch2,itc_slice_str(ch1,1,itc_len(ch1))));
+        last=calsum(ch2,itc_slice_str(ch1,1,itc_len(ch1)), maxlen(ch2,itc_slice_str(ch1,1,itc_len(ch1))));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
+    }else{
+    last=calcrazn(ch1,ch2, maxlen(ch1,ch2));
+    cout<<last;
+    cout<<endl;
+    //writecom();
     }
 
-    cout<<calcrazn(ch1,ch2, maxlen(ch1,ch2));
-    cout<<endl;
-    writecom();
-
 }
-void raspredymnosh(string ch1,string ch2,string znak)
+void raspredymnosh(string ch1,string ch2,string znak,string &last)
 {
     if(ch1=="0" || ch2=="0")
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
+        last="0";
         cout<<"0";
         cout<<endl;
-        writecom();
+        //writecom();
         return;
     }
     if(ch1[0]=='-' && ch2[0]=='-')
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<calcumnoshen( itc_slice_str (ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,ch2));
+        last=calcumnoshen( itc_slice_str (ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,ch2));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]!='-' && ch2[0]=='-')
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<"-"+calcumnoshen(ch1,itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,itc_slice_str(ch2,1,itc_len(ch1))));
+        last="-"+calcumnoshen(ch1,itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,itc_slice_str(ch2,1,itc_len(ch1))));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]=='-' && ch2[0]!='-')
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<"-"+calcumnoshen(itc_slice_str(ch1,1,itc_len(ch1)),ch2, maxlen(itc_slice_str(ch1,1,itc_len(ch1)),ch2));
+        last="-"+calcumnoshen(itc_slice_str(ch1,1,itc_len(ch1)),ch2, maxlen(itc_slice_str(ch1,1,itc_len(ch1)),ch2));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<"-"+calcumnoshen(ch1,ch2,maxlen(ch1,ch2));
+        last=calcumnoshen(ch1,ch2,maxlen(ch1,ch2));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }
 }
-void raspreddel(string ch1,string ch2,string znak)
+void raspreddel(string ch1,string ch2,string znak,string &last)
 {
     if(ch2=="0")
     {
-        printerror();
+        printerror3();
+        last="empty";
 
         return;
     }
-    if(ch2=="0"){printerror();cout<<endl;writecom();return;}
+    if(ch1=="0"){last="0";cout<<"0";return;}
         if(ch1[0]=='-' && ch2[0]=='-')
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<calcdel( itc_slice_str (ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,ch2));
+        last=calcdel( itc_slice_str (ch1,1,itc_len(ch1)),itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,ch2));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]!='-' && ch2[0]=='-')
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<"-"+calcdel(ch1,itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,itc_slice_str(ch2,1,itc_len(ch1))));
+        last="-"+calcdel(ch1,itc_slice_str(ch2,1,itc_len(ch1)), maxlen(ch1,itc_slice_str(ch2,1,itc_len(ch1))));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else if(ch1[0]=='-' && ch2[0]!='-')
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<"-"+calcdel(itc_slice_str(ch1,1,itc_len(ch1)),ch2, maxlen(itc_slice_str(ch1,1,itc_len(ch1)),ch2));
+        last="-"+calcdel(itc_slice_str(ch1,1,itc_len(ch1)),ch2, maxlen(itc_slice_str(ch1,1,itc_len(ch1)),ch2));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }else
     {
         print("Answer>> "+ch1+znak+ch2+"==",10,"G");
         SetConsoleTextAttribute(hConsole, 9);
-        cout<<calcdel(ch1,ch2,maxlen(ch1,ch2));
+        last=calcdel(ch1,ch2,maxlen(ch1,ch2));
+        cout<<last;
         cout<<endl;
-        writecom();
+        //writecom();
     }
 }
-string raspredelenie(string ch1,string ch2,string znak)
+string raspredelenie(string ch1,string ch2,string znak, string &last)
 {
     ch1=ubratnuli(ch1);
     ch2=ubratnuli(ch2);
@@ -149,21 +167,22 @@ string raspredelenie(string ch1,string ch2,string znak)
             }
             if(znak=="+")
             {
-                raspredplus(ch1,ch2,znak);
-                cin>>com;
+                raspredplus(ch1,ch2,znak,last);
+                //cin>>com;
             }else if(znak=="-")
             {
-                raspredrazn(ch1,ch2,znak);
-                cin>>com;
+                raspredrazn(ch1,ch2,znak,last);
+                //cin>>com;
             }else if(znak=="*")
             {
-                raspredymnosh(ch1,ch2,znak);
-                cin>>com;
+                raspredymnosh(ch1,ch2,znak,last);
+                //cin>>com;
             }
             else if(znak=="/")
             {
-                raspreddel(ch1,ch2,znak);
-                cin>>com;
+                raspreddel(ch1,ch2,znak,last);
+                //cin>>com;
             }
+            //cin>>com;
     return com;
 }

@@ -1,28 +1,29 @@
 # depslib dependency file v1.0
-1638719016 source:c:\users\rcmak\onedrive\informatica\super puper calculator\main.cpp
+1638989213 source:c:\users\rcmak\onedrive\informatica\super puper calculator\main.cpp
 	"Calculator_header.h"
 
-1638716083 source:c:\users\rcmak\onedrive\informatica\super puper calculator\print(str_time_color).cpp
+1638987500 source:c:\users\rcmak\onedrive\informatica\super puper calculator\print(str_time_color).cpp
 	"Calculator_header.h"
 
-1638437932 c:\users\rcmak\onedrive\informatica\super puper calculator\calculator_header.h
+1638990743 c:\users\rcmak\onedrive\informatica\super puper calculator\calculator_header.h
 	<iostream>
 	"windows.h"
 	<string>
+	<mmsystem.h>
 
-1638718923 source:c:\users\rcmak\onedrive\informatica\super puper calculator\printmenu.cpp
+1638988869 source:c:\users\rcmak\onedrive\informatica\super puper calculator\printmenu.cpp
 	"Calculator_header.h"
 
 1638374264 source:c:\users\rcmak\onedrive\informatica\super puper calculator\vspomogat_len_slice.cpp
 	"Calculator_header.h"
 
-1637840440 source:c:\users\rcmak\onedrive\informatica\super puper calculator\vspomogat_inttosimb_ch1_ch2.cpp
+1638990743 source:c:\users\rcmak\onedrive\informatica\super puper calculator\vspomogat_inttosimb_ch1_ch2.cpp
 	"Calculator_header.h"
 
 1637785849 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculate_sum.cpp
 	"Calculator_header.h"
 
-1638444999 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculate_raznost.cpp
+1638990578 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculate_raznost.cpp
 	"Calculator_header.h"
 
 1638202599 source:c:\users\rcmak\onedrive\informatica\super puper calculator\reverse_str.cpp
@@ -37,6 +38,6 @@
 1638370664 source:c:\users\rcmak\onedrive\informatica\super puper calculator\calculator_new menu.cpp
 	"Calculator_header.h"
 
-1638720451 source:c:\users\rcmak\onedrive\informatica\super puper calculator\raspredelenie.cpp
+1638990743 source:c:\users\rcmak\onedrive\informatica\super puper calculator\raspredelenie.cpp
 	"Calculator_header.h"
 

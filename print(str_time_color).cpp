@@ -18,6 +18,10 @@ void print(string str, int time, string color)
             {
                 SetConsoleTextAttribute(hConsole, 10);
 
+            }else if(color=="Y")
+            {
+                SetConsoleTextAttribute(hConsole, 6);
+
             }
             cout<<str[i];
         //Sleep(time/9);

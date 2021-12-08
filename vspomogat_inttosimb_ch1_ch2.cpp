@@ -17,7 +17,7 @@ char inttosimb(int a)
         ot='A';
     }else
     {
-        return '9';
+        return ' ';
     }
     return ot;
 }
@@ -59,4 +59,9 @@ int itc_str_to_int(char a)
         return 0;
     }
     return ot;
+}
+void printerror3()
+{
+    print("Error #1gb62bnuw75bnt# >> Wrong input! learn algebra ****. you cannot  divided by 0",10,"R");
+    cout<<endl;
 }

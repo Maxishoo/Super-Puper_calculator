@@ -5,12 +5,16 @@
 #include <iostream>
 #include "windows.h"
 #include <string>
+#include <mmsystem.h>
+
+#pragma comment (lib, "winmm.lib")
 using namespace std;
 
 void print(string str, int time, string color);
 void printmenu();
 void exitt();
 void Hi();
+void memoryman();
 
 
 
@@ -19,6 +23,8 @@ unsigned long long itc_len(string a);
 char inttosimb(int a);
 int itc_str_to_int(char a);
 bool maxlen(string s1,string s2);
+string ubratznaki(string str);
+void printerror3();
 
 string calsum(string str1, string str2,bool maxlen);
 void writecom();
@@ -29,7 +35,7 @@ string reverse_str(string otv);
 void calmanual();
 void calcmenu(string chislo1,string chislo2,string znak);
 bool itc_compare(string S1, string S2);
-string raspredelenie(string ch1,string ch2,string znak);
+string raspredelenie(string ch1,string ch2,string znak, string &last);
 void printerror();
 string ubratnuli(string str);
 bool ischislo(string str);

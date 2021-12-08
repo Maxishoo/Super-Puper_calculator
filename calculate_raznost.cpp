@@ -1,4 +1,21 @@
 #include "Calculator_header.h"
+string ubratznaki(string str)
+{
+    string newotv="";
+    int k=1;
+    long long i=0;
+while(str[i]!='-' && str[i]!='+' && i<itc_len(str)-1)
+{
+    i++;
+}
+    if(i==0){return str;}
+    newotv=itc_slice_str(str,i,itc_len(str));
+    if(itc_len(newotv)==0)
+    {
+        return "0";
+    }
+return newotv;
+}
 string ubratnuli(string str)
 {
     string newotv="";
@@ -14,6 +31,7 @@ while(str[i]=='0' && i<itc_len(str)-1)
     {
         return "0";
     }
+    newotv=ubratznaki(newotv);
 return newotv;
 }
 bool ischislo(string str)
@@ -25,7 +43,7 @@ while(i<itc_len(str))
     if(str[i]>='0' && str[i]<='9')
     {
         newotv+=str[i];
-    }else{printerror();return false;}
+    }else{/*printerror();*/return false;}
     i++;
 }
     if(itc_len(newotv)==0)

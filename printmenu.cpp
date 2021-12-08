@@ -14,7 +14,7 @@ print("*************************************************************************
     cout<<endl;
     print("******  Write   /menu     go back to menu                       *************",10,"G");
     cout<<endl;
-    print("******  Write   /Hi       to say Hi to me                       *************",10,"G");
+    print("******  Write   /mem_man      to say How to use memory              *************",10,"G");
     cout<<endl;
     print("*****************************************************************************",10,"B");
     cout<<endl;
@@ -70,4 +70,21 @@ void calmanual()
     print("Znak>>+  or Znak>>/ without spaces",10,"B");
     cout<<endl;
     writecom();
+}
+void memoryman()
+{
+    print("*****************************************************************************",10,"B");
+    cout<<endl;
+    print("******  You can use   /m   to remember the result or the number *************",10,"Y");
+    cout<<endl;
+    print("******  You can use   /mc   to clear memory                     *************",10,"Y");
+    cout<<endl;
+    print("******  You can use   /last to see last result                  *************",10,"Y");
+    cout<<endl;
+    print("******  You can use   /mr   to use memory like number           *************",10,"Y");
+    cout<<endl;
+    print("******  You can use   /show_mem   to use show memory            *************",10,"Y");
+    cout<<endl;
+    print("*****************************************************************************",10,"B");
+    cout<<endl;
 }
